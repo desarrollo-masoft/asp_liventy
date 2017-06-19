@@ -54,6 +54,7 @@ namespace Presentacion
             string where6 = "";
             string where7 = "";
             string where8 = "";
+            string where9 = "";
 
 
             if (!String.IsNullOrEmpty(Request.QueryString["razon_providencias"]))

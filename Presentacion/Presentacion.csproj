@@ -13,13 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Presentacion</RootNamespace>
     <AssemblyName>Presentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,6 +40,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNet.ScriptManager.jQuery, Version=1.9.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -67,11 +70,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -121,8 +122,13 @@
     <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contAvocoConocimiento.aspx" />
+    <Content Include="contJuiciosEstadisticasaspx.aspx" />
+    <Content Include="contMatrizJuicios.aspx" />
+    <Content Include="Datas\StyleSheet1.css" />
     <Content Include="logonestle2.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -183,192 +189,37 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="app\entrega.nfc.apk" />
-    <Content Include="Php\Contendor\conBalanceComprobacionDetallado.aspx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="contProvidenciaSuspension.aspx" />
+    <Content Include="Datas\dtProvidenciaSuspension.xsc">
+      <DependentUpon>dtProvidenciaSuspension.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Contendor\conComprobantes.aspx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Php\Contendor\conComprobantesContables.aspx" />
-    <Content Include="Php\Contendor\conComprobantesEgresos.aspx" />
-    <Content Include="Php\Contendor\conComprobantesIngresos.aspx" />
-    <Content Include="Php\Contendor\conEres04.aspx" />
-    <Content Include="Php\Contendor\conMayorDetallado.aspx" />
-    <Content Include="Php\Contendor\conpruebas.aspx" />
-    <Content Include="Php\Contendor\conReporteComprobantes.aspx" />
-    <Content Include="Php\Contendor\conReporteDeuda.aspx" />
-    <Content Include="Php\Contendor\conReporteDeudaIndividual.aspx" />
-    <Content Include="Php\Contendor\conReporteRecaudacion.aspx" />
-    <Content Include="Php\Contendor\conReporteRecaudacionIndividual.aspx" />
-    <Content Include="Php\Contendor\conReporteTablaAmortizacion.aspx" />
-    <Content Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx" />
-    <Content Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx" />
-    <Content Include="Php\Contendor\conTablaAmortizacionIndividual.aspx" />
-    <Content Include="Php\Datas\dsCuentas.xsc">
-      <DependentUpon>dsCuentas.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsBalanceComprobacionDetallado.xsc">
-      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsBalanceComprobacionDetallado.xss">
-      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsComprobantesContables.xsc">
-      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsComprobantesContables.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobantesContables.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsComprobantesContables.xss">
-      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsComprobantesEgresos.xsc">
-      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsComprobantesEgresos.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobantesEgresos.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsComprobantesEgresos.xss">
-      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsComprobantesIngresos.xsc">
-      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsComprobantesIngresos.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobantesIngresos.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsComprobantesIngresos.xss">
-      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsCuentas.xsd">
+    <None Include="Datas\dtProvidenciaSuspension.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsCuentas.Designer.cs</LastGenOutput>
+      <LastGenOutput>dtProvidenciaSuspension.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Php\Datas\dsCuentas.xss">
-      <DependentUpon>dsCuentas.xsd</DependentUpon>
+    <Content Include="Datas\dtProvidenciaSuspension.xss">
+      <DependentUpon>dtProvidenciaSuspension.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsMayor.xsc">
-      <DependentUpon>dsMayor.xsd</DependentUpon>
+    <Content Include="Datas\dtMatrizJuicios.xsc">
+      <DependentUpon>dtMatrizJuicios.xsd</DependentUpon>
     </Content>
-    <Content Include="Php\Datas\dsComprobantes.xsc">
-      <DependentUpon>dsComprobantes.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsComprobantes.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsComprobantes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsComprobantes.xss">
-      <DependentUpon>dsComprobantes.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsBalanceComprobacionDetallado.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsBalanceComprobacionDetallado.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsEres04.xsc">
-      <DependentUpon>dsEres04.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsEres04.xsd">
+    <None Include="Datas\dtMatrizJuicios.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsEres04.Designer.cs</LastGenOutput>
+      <LastGenOutput>dtMatrizJuicios.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Php\Datas\dsEres04.xss">
-      <DependentUpon>dsEres04.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsMayor.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsMayor.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsMayor.xss">
-      <DependentUpon>dsMayor.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsReporteComprobantes.xsc">
-      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsRecaudacion_tabla.xsc">
-      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsRecaudacion_tabla.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsRecaudacion_tabla.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsRecaudacion_tabla.xss">
-      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsReporteComprobantes.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReporteComprobantes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Php\Datas\dsReporteComprobantes.xss">
-      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsTablaAmortizacion.xsc">
-      <DependentUpon>dsTablaAmortizacion.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsReporteRecaudacion.xsc">
-      <DependentUpon>dsReporteRecaudacion.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsReporteDeuda.xsc">
-      <DependentUpon>dsReporteDeuda.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsReporteDeuda.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReporteDeuda.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsReporteDeuda.xss">
-      <DependentUpon>dsReporteDeuda.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsReporteRecaudacion.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReporteRecaudacion.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsReporteRecaudacion.xss">
-      <DependentUpon>dsReporteRecaudacion.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsTablaAmortizacion.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsTablaAmortizacion.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsTablaAmortizacion.xss">
-      <DependentUpon>dsTablaAmortizacion.xsd</DependentUpon>
-    </Content>
-    <Content Include="Php\Datas\dsTablaAmortizacionIndividual.xsc">
-      <DependentUpon>dsTablaAmortizacionIndividual.xsd</DependentUpon>
-    </Content>
-    <None Include="Php\Datas\dsTablaAmortizacionIndividual.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsTablaAmortizacionIndividual.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Php\Datas\dsTablaAmortizacionIndividual.xss">
-      <DependentUpon>dsTablaAmortizacionIndividual.xsd</DependentUpon>
+    <Content Include="Datas\dtMatrizJuicios.xss">
+      <DependentUpon>dtMatrizJuicios.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\censoclientes.pubxml" />
     <None Include="Properties\PublishProfiles\contabilidad2016.pubxml" />
     <None Include="Properties\PublishProfiles\controlentrega.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Php\Inicio.aspx" />
-    <Content Include="Reporte.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\DateTimePicker.js" />
@@ -391,406 +242,81 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
-    <Content Include="servicioweb\ReporteContabilidad.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\ClasesServicioWeb.cs" />
-    <Compile Include="Clases\Funciones.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Clases\ParametrosRpt.cs" />
+    <Compile Include="contAvocoConocimiento.aspx.cs">
+      <DependentUpon>contAvocoConocimiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="contAvocoConocimiento.aspx.designer.cs">
+      <DependentUpon>contAvocoConocimiento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Php\Clases\ParametrosRpt.cs" />
-    <Compile Include="Php\Contendor\conEres04.aspx.cs">
-      <DependentUpon>conEres04.aspx</DependentUpon>
+    <Compile Include="contJuiciosEstadisticasaspx.aspx.cs">
+      <DependentUpon>contJuiciosEstadisticasaspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Php\Contendor\conEres04.aspx.designer.cs">
-      <DependentUpon>conEres04.aspx</DependentUpon>
+    <Compile Include="contJuiciosEstadisticasaspx.aspx.designer.cs">
+      <DependentUpon>contJuiciosEstadisticasaspx.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Php\Contendor\conReporteDeuda.aspx.cs">
-      <DependentUpon>conReporteDeuda.aspx</DependentUpon>
+    <Compile Include="contMatrizJuicios.aspx.cs">
+      <DependentUpon>contMatrizJuicios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Php\Contendor\conReporteDeuda.aspx.designer.cs">
-      <DependentUpon>conReporteDeuda.aspx</DependentUpon>
+    <Compile Include="contMatrizJuicios.aspx.designer.cs">
+      <DependentUpon>contMatrizJuicios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Php\Contendor\conReporteDeudaIndividual.aspx.cs">
-      <DependentUpon>conReporteDeudaIndividual.aspx</DependentUpon>
+    <Compile Include="contProvidenciaSuspension.aspx.cs">
+      <DependentUpon>contProvidenciaSuspension.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Php\Contendor\conReporteDeudaIndividual.aspx.designer.cs">
-      <DependentUpon>conReporteDeudaIndividual.aspx</DependentUpon>
+    <Compile Include="contProvidenciaSuspension.aspx.designer.cs">
+      <DependentUpon>contProvidenciaSuspension.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Php\Contendor\conReporteRecaudacion.aspx.cs">
-      <DependentUpon>conReporteRecaudacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteRecaudacion.aspx.designer.cs">
-      <DependentUpon>conReporteRecaudacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteRecaudacionIndividual.aspx.cs">
-      <DependentUpon>conReporteRecaudacionIndividual.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteRecaudacionIndividual.aspx.designer.cs">
-      <DependentUpon>conReporteRecaudacionIndividual.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx.cs">
-      <DependentUpon>conReporteTablaAmortizacionIndividualPagos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacionIndividualPagos.aspx.designer.cs">
-      <DependentUpon>conReporteTablaAmortizacionIndividualPagos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx.cs">
-      <DependentUpon>conReporteTablaAmortizacionPagos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacionPagos.aspx.designer.cs">
-      <DependentUpon>conReporteTablaAmortizacionPagos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conTablaAmortizacionIndividual.aspx.cs">
-      <DependentUpon>conTablaAmortizacionIndividual.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conTablaAmortizacionIndividual.aspx.designer.cs">
-      <DependentUpon>conTablaAmortizacionIndividual.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conBalanceComprobacionDetallado.aspx.cs">
-      <DependentUpon>conBalanceComprobacionDetallado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Php\Contendor\conBalanceComprobacionDetallado.aspx.designer.cs">
-      <DependentUpon>conBalanceComprobacionDetallado.aspx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantes.aspx.cs">
-      <DependentUpon>conComprobantes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantes.aspx.designer.cs">
-      <DependentUpon>conComprobantes.aspx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesContables.aspx.cs">
-      <DependentUpon>conComprobantesContables.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesContables.aspx.designer.cs">
-      <DependentUpon>conComprobantesContables.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesEgresos.aspx.cs">
-      <DependentUpon>conComprobantesEgresos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesEgresos.aspx.designer.cs">
-      <DependentUpon>conComprobantesEgresos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesIngresos.aspx.cs">
-      <DependentUpon>conComprobantesIngresos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conComprobantesIngresos.aspx.designer.cs">
-      <DependentUpon>conComprobantesIngresos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conMayorDetallado.aspx.cs">
-      <DependentUpon>conMayorDetallado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conMayorDetallado.aspx.designer.cs">
-      <DependentUpon>conMayorDetallado.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conpruebas.aspx.cs">
-      <DependentUpon>conpruebas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conpruebas.aspx.designer.cs">
-      <DependentUpon>conpruebas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteComprobantes.aspx.cs">
-      <DependentUpon>conReporteComprobantes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteComprobantes.aspx.designer.cs">
-      <DependentUpon>conReporteComprobantes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacion.aspx.cs">
-      <DependentUpon>conReporteTablaAmortizacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Contendor\conReporteTablaAmortizacion.aspx.designer.cs">
-      <DependentUpon>conReporteTablaAmortizacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Contendor\Contenedor.cs" />
-    <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.cs">
-      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsComprobantesContables.Designer.cs">
+    <Compile Include="Datas\dtProvidenciaSuspension.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsComprobantesContables.xsd</DependentUpon>
+      <DependentUpon>dtProvidenciaSuspension.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Php\Datas\dsComprobantesEgresos.Designer.cs">
+    <Compile Include="Datas\dtMatrizJuicios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsComprobantesEgresos.xsd</DependentUpon>
+      <DependentUpon>dtMatrizJuicios.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Php\Datas\dsComprobantesIngresos.Designer.cs">
+    <Compile Include="Reporte\rptJuciosEstadisticas2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsComprobantesIngresos.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsCuentas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsCuentas.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsComprobantes.Designer.cs">
-      <DependentUpon>dsComprobantes.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Datas\dsBalanceComprobacionDetallado.Designer.cs">
-      <DependentUpon>dsBalanceComprobacionDetallado.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Datas\dsEres04.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsEres04.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsMayor.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsMayor.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsRecaudacion_tabla.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsRecaudacion_tabla.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsReporteComprobantes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsReporteComprobantes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsReporteDeuda.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsReporteDeuda.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsReporteRecaudacion.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsReporteRecaudacion.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsTablaAmortizacion.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsTablaAmortizacion.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Datas\dsTablaAmortizacionIndividual.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsTablaAmortizacionIndividual.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Php\Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionAbril.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionAbril.rpt</DependentUpon>
+      <DependentUpon>rptJuciosEstadisticas2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionAgosto.cs">
+    <Compile Include="Reporte\rptJuiciosEstadisticas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionAgosto.rpt</DependentUpon>
+      <DependentUpon>rptJuiciosEstadisticas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionDetallado.cs">
-      <DependentUpon>crBalanceComprobacionDetallado.rpt</DependentUpon>
+    <Compile Include="Reporte\rptMatrizJuicios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMatrizJuicios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\rptProvidenciaAvocoConocimiento.cs">
+      <DependentUpon>rptProvidenciaAvocoConocimiento.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionDiciembre.cs">
+    <Compile Include="Reporte\rptProvidenciaSuspension.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionDiciembre.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionEnero.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionEnero.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionFebrero.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionFebrero.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionJulio.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionJulio.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crEres04.cs">
-      <DependentUpon>crEres04.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crReporteRecaudacion.cs">
-      <DependentUpon>crReporteRecaudacion.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crReporteDeuda.cs">
-      <DependentUpon>crReporteDeuda.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crTablaAmortizacionPagos.cs">
-      <DependentUpon>crTablaAmortizacionPagos.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crTablaAmortizacion.cs">
-      <DependentUpon>crTablaAmortizacion.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionJunio.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionJunio.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionMarzo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionMarzo.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionMayo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionMayo.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionNoviembre.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionNoviembre.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionOctubre.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionOctubre.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobacionSeptiembre.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobacionSeptiembre.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crComprobantes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crComprobantes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crComprobantesContables.cs">
-      <DependentUpon>crComprobantesContables.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crComprobantesEgresos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crComprobantesEgresos.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crComprobantesIngresos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crComprobantesIngresos.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crCuentas.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crCuentas.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crMayorSimplificado.cs">
-      <DependentUpon>crMayorSimplificado.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Php\Reporte\crMayorDetallado.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crMayorDetallado.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crBalanceComprobancionSimplificado.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crBalanceComprobancionSimplificado.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\crReporteComprobantes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crReporteComprobantes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Php\Reporte\empty.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>empty.rpt</DependentUpon>
+      <DependentUpon>rptProvidenciaSuspension.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte.aspx.cs">
-      <DependentUpon>Reporte.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reporte.aspx.designer.cs">
-      <DependentUpon>Reporte.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="servicioweb\ReporteContabilidad.asmx.cs">
-      <DependentUpon>ReporteContabilidad.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -821,121 +347,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionAbril.rpt">
+    <EmbeddedResource Include="Reporte\rptJuciosEstadisticas2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionAbril.cs</LastGenOutput>
+      <LastGenOutput>rptJuciosEstadisticas2.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionAgosto.rpt">
+    <EmbeddedResource Include="Reporte\rptJuiciosEstadisticas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionAgosto.cs</LastGenOutput>
+      <LastGenOutput>rptJuiciosEstadisticas.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionDetallado.rpt">
+    <EmbeddedResource Include="Reporte\rptMatrizJuicios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionDetallado.cs</LastGenOutput>
+      <LastGenOutput>rptMatrizJuicios.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionDiciembre.rpt">
+    <EmbeddedResource Include="Reporte\rptProvidenciaAvocoConocimiento.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionDiciembre.cs</LastGenOutput>
+      <LastGenOutput>rptProvidenciaAvocoConocimiento.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionEnero.rpt">
+    <EmbeddedResource Include="Reporte\rptProvidenciaSuspension.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionEnero.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionFebrero.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionFebrero.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionJulio.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionJulio.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crEres04.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crEres04.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crReporteRecaudacion.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crReporteRecaudacion.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crReporteDeuda.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crReporteDeuda.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crTablaAmortizacionPagos.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crTablaAmortizacionPagos.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crTablaAmortizacion.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crTablaAmortizacion.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionJunio.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionJunio.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionMarzo.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionMarzo.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionMayo.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionMayo.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionNoviembre.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionNoviembre.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionOctubre.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionOctubre.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobacionSeptiembre.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobacionSeptiembre.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crComprobantes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crComprobantes.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crComprobantesContables.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crComprobantesContables.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crComprobantesEgresos.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crComprobantesEgresos.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crComprobantesIngresos.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crComprobantesIngresos.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crCuentas.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crCuentas.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crMayorSimplificado.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crMayorSimplificado.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crMayorDetallado.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crMayorDetallado.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crBalanceComprobancionSimplificado.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crBalanceComprobancionSimplificado.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\crReporteComprobantes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crReporteComprobantes.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Php\Reporte\empty.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>empty.cs</LastGenOutput>
+      <LastGenOutput>rptProvidenciaSuspension.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contendor\" />
+    <Folder Include="providencias\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
